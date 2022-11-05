@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function displayDate(){
+                console.log("calling displayDate")
+                var date = new Date()
+                console.log(date)
+                console.log(date.getFullYear())
+                console.log(date.getDay())
+
+                document.getElementById("html").innerHTML = date
+                document.getElementById("html").style.color = "green"
+
+                //window.location.href = ""
+            }
+
+            // Function Express
+            var output = function display(){
+                console.log("calling display")
+            }
+            // console.log(output)
+            output()
+            
+            //Ananymous function
+            var ananymous = function (){
+                console.log("calling ananymous function")
+            }
+            ananymous()
+
+            var a;
+            a = 10;
+            console.log(a)
+            var a;
+            console.log(a)
+            
+            let b;
+            b = "script"
+            console.log(b)
+            // let b;
+            // console.log(b)
+            
+            const PI = 3.14;
+            console.log(PI)
+
+            //var, let, const
+            //Print satement 10 times
+                for(let i = 0; i < 10;i++){
+                    console.log("Learning looping in javascript")
+                }
+
+               /* do{
+                    console.log("calling do while")
+                } while()*/
+
+                //Arrays
+                let arr = [1,2,3,4]
+                console.log(arr)
+
+                // we can write any kind of data
+                let arr1 = ["anu", "Muski", "Shree", 1 ,2 ,3]
+                console.log(arr1)
+
+                for(let i = 0;i < arr1.length;i++){
+                    console.log(arr1[i])
+                }
+
+                let arr3 = []
+                arr3.push(5)//add an element at end of array
+                arr3.push(6)
+                arr3.push(7)
+                console.log(arr3)
+
+                arr3.pop() //remove an element at end of array
+                console.log(arr3)
+
+                arr3.unshift(10)// add an  element at begining of array
+                console.log(arr3)
+
+                arr3.unshift(8)
+                console.log(arr3)
+
+                arr3.shift()//remove an element at begining of array
+                console.log(arr3)
+
+                let movie = {
+                    "movieName": "Kantara",
+                    "Price": 200
+                }
+
+                let movie1 = {
+                    "movieName": "Munagru male",
+                    "price": 220
+                }
+                console.log(movie)
+                console.log(movie1)
+
+                let movies = []
+                movies.push(movie)
+                movies.push(movie1)
+                console.log(movies)
+
+
+
+        </script>
+    </head>
+    <body>
+        <button onclick="displayDate()">Click me on I will display date</button>
+        <button onclick="movies">Click for movies</button>
+        <div  id = "html"></div>
+    </body>
+</html>

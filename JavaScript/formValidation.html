@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <script>
+            function validate(){
+                console.log("calling validate function")
+                var userName = document.getElementById("userName")
+                console.log(userName.value)
+                console.log(userName.value.length)
+                if(userName.value ==""){
+                    console.log("please enter userName")
+                    var errorUserName = document.getElementById("errorUserName")
+                    errorUserName.innerHTML = "please enter username"
+                    errorUserName.style.color ='red'
+                
+                }
+
+                var email = document.getElementById("email")
+                console.log(email.value)
+                if(email.value == ""){
+                    console.log("please enterMail")
+                    var erroeEmail = document.getElementById("errorEmailId")
+                    errorEmail.innerHTML = "please enter emailId"
+                    errorEmail.style.color = 'red'
+                }
+
+
+                var password = document.getElementById("password")
+                console.log(password.value)
+                if(password.value == ""){
+                    console.log("please enterPassword")
+                    var errorPassword = document.getElementById("errorPassword")
+                    errorPassword.innerHTML = "please enter Password"
+                    errorPassword.style.color = 'red'
+                }
+
+                var gender = document.formRegister.gender
+                console.log(gender)
+                console.log(gender[0])
+                console.log(gender[1])
+                console.log(gender[2])
+                console.log(gender[0].checked)
+                console.log(gender[1].checked)
+                console.log(gender[2].checked)
+                if(gender[0].checked == false && gender[1].checked == false && gender[2].checked == false){
+                    console.log("Please select gender")
+                }
+
+
+
+                console.log(userName.value)
+                console.log(password.value)
+                console.log(email.value)
+
+                var obj ={
+                    "userName":userName.value,
+                    "email":email.value,
+                    "password":password.value
+                }
+
+                console.log(obj)
+
+
+                //localStorage 
+                localStorage.setItem("javascript", "storage in localstorage")
+                var objString = JSON.stringify(obj)
+                console.log(objString)
+                localStorage.setItem("xworkzuser",objString)
+                localStorage.getItem("xworkzuser")
+
+            }
+            
+        </script>
+    </head>
+    <body>
+        <!-- form-->
+        <form name="formRegister">
+            <div>
+                <label>Enter Username</label>
+                <input type="text" name="userName" id="userName">
+                <span id="errorUserName"></span>
+            </div>
+            <div>
+                <label>Enter email</label>
+                <input type="email" name="email" id="email">
+                <span id="errorEmail"></span>
+            </div>
+            <div>
+                <label>Enter password</label>
+                <input type="password" name="password" id="password">
+                <span id="errorPassword"></span>
+            </div>
+            <!--<div>
+                <label>Enter gender</label>
+                <input type="gender" name="gender" id="gender">
+                <span id="errorGender"></span>
+            </div>-->
+            <div>
+                <label>Select Gender</label>
+                <input type="radio" name="gender">Male
+                <input type="radio" name="gender">Female
+                <input type="radio" name="gender">Others
+            </div>
+
+            <button type="button" onclick="validate()">Register</button>
+            <button type="reset">Reset</button>
+        </form>
+
+        <!-- When you click button
+            Generate event
+            input -> click on button
+            output -> Error message-->
+    </body>
+</html>
+
+
+            
+
+
+
+            }

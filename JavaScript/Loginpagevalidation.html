@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <script>
+            function login(){
+
+                var email = document.getElementById("email")
+                var password = document.getElementById("password")
+                console.log(email.value)
+                console.log(password.value)
+
+                var registeredUser= localStorage.getItem("xworkzuser")
+                console.log(registeredUser)
+                console.log(registeredUser.email)
+                var registeredObj = JSON.parse(registeredUser)
+
+
+                ///logic for comparing the values
+                ///Email, password matching print Login success
+                ///Email, password not matching print Email or password is incorrect
+
+
+
+                //compare value in javascript
+                console.log(registeredObj)
+                if(email.value == registeredObj.email &&
+                password.value == registeredObj.password) {
+                    console.log("Login success")
+                    //window.location.href = "https://facebook.com"
+                    window.location.href = "./index.html"
+
+                    //navigate to html page
+
+                }else {
+                    console.log("Invalid email or password")
+
+                } 
+                // var a
+                // leb b
+                // differnce between var, let
+                // difference between == and ===
+                // display a date in html
+                // what is function
+                // for()
+                // Array
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <div>
+                <label>Enter Email</label>
+                <input type="email" name="email"  id= "email">
+            </div>
+
+            <div>
+                 <label>Enter Password</label>
+                 <input type ="password" name="password" id= "password">
+            </div>
+            <button type = "button" onclick="login()">login</button>
+            <button>Reset</button>
+        </form>
+    </body>
+</html>                
